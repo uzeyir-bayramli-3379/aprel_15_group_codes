@@ -54,4 +54,17 @@ return productDAO.findById(id).get();
 	 
 		productDAO.save(product);
 	}
+	
+	@GetMapping(path="/name/{name}")
+	public  List<Product>  findAllByName(@PathVariable(name="name") String name){
+return productDAO.findAllByName(name);
+	}
+	
+	@GetMapping(path="/search/{search}")
+	public  List<Product>  findAllSearch(@PathVariable(name="search") String search){
+return productDAO.findAllSearch(search);
+	}
+	
+	
+	
 }
