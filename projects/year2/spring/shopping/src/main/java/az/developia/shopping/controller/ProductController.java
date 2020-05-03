@@ -3,6 +3,8 @@ package az.developia.shopping.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +27,7 @@ public class ProductController {
 	private ProductDAO productDAO;
 	
 	@PostMapping
-	public void add(@RequestBody Product product){
+	public void add(@Valid @RequestBody Product product){
 		product.setId(null);
 		productDAO.save(product);
 	}
