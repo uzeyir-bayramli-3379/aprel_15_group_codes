@@ -67,4 +67,20 @@ return productDAO.findAllSearch(search);
 	
 	
 	
+	
+	
+	
+	@GetMapping(path="/find-partial/{begin}/{length}")
+	public  List<Product>  findAllPartial(@PathVariable(name="begin") Integer begin,@PathVariable(name="length") Integer length){
+return productDAO.findAllPartial(begin,length);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

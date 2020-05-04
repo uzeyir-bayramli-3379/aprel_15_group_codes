@@ -16,4 +16,12 @@ public List<Product> findAllByName(String n);
 // @Query(value="select * from product where name like %?1% or price like %?1% or description like %?1%",nativeQuery=true)
 // select * from product where name like %ar% or price like %ar% or description like %ar%
 public List<Product> findAllSearch(String search);
+
+
+@Query(value="select * from product  limit ?1,?2",nativeQuery=true)
+//@Query(value="select * from product where name like %?1% or price like %?1% or description like %?1%",nativeQuery=true)
+//select * from product where name like %ar% or price like %ar% or description like %ar%
+
+ 
+public List<Product> findAllPartial(Integer begin,Integer length);
 }
