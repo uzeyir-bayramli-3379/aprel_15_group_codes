@@ -9,7 +9,8 @@ export class AppComponent {
   title = 'my-project';
 
   name:string='Ferid';
-  buttonPressed(){
-    alert('duymeye basildi')
+  buttonPressed(age:number){
+    alert('duymeye basildi, age='+age)
+ 
   }
 }
