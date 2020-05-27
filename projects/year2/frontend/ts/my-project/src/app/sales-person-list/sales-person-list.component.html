@@ -1,0 +1,30 @@
+<button (click)="showProducts()">show products</button>
+
+<hr>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad</th>
+            <th>Qiymet</th>
+            <th>Sekil</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+<td>
+    {{p.id}}
+</td>
+<td>
+    {{p.name}}
+</td>
+<td>
+    {{p.price}}
+</td>
+<td>
+    {{p.image}}
+</td>
+        </tr>
+    </tbody>
+</table>

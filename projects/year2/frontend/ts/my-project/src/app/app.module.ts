@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { SalesPersonListComponent } from './sales-person-list/sales-person-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SalesPersonListComponent
   ],
   imports: [
     BrowserModule,
