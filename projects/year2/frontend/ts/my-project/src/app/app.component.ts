@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './model/models';
-
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +9,7 @@ import { Product } from './model/models';
 export class AppComponent {
   title = 'my-project';
 products:Product[]=[];
-  name:string='Ferid';
+  name:string='Ferid';   
   buttonPressed(age:number){
     alert('duymeye basildi, age='+age)
  
