@@ -15,6 +15,17 @@ export class AppComponent {
  
   }
 
+
+showComponent:boolean=true;
+
+  hideComponent(){
+this.showComponent=false;
+  }
+
+  showComponentMethod(){
+    this.showComponent=true;
+      }
+price:number=8465814.646456456;
 }
 
 

@@ -1,15 +1,9 @@
-<h1>Hello</h1>
-<hr>
-<p>Java program</p>
- 
-<input type="text" [(ngModel)]="name"  >
 
-<hr>
-{{name}}
-<hr>
-<button (click)="buttonPressed(9)">Sade duyme</button>
-<hr>
-<app-sales-person-list></app-sales-person-list>
-<hr>
-<hr>
-<app-sales-person-list></app-sales-person-list>
+<button (click)="hideComponent()">hide Component</button>
+<button (click)="showComponentMethod()">show Component</button>
+
+
+<app-sales-person-list *ngIf="showComponent"></app-sales-person-list>
+
+
+{{price | currency:'AZN'}}
