@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { SalesPersonListComponent } from './sales-person-list/sales-person-list.component';
 import { MenuComponent } from './component/menu/menu.component';
+import { AdminComponent } from './component/admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SalesPersonListComponent,
-    MenuComponent
+    MenuComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
