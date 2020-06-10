@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Product } from '../model/models';
 
 @Injectable({
@@ -11,6 +11,10 @@ export class AdminService {
 
 
   findAllProducts(){
-    return this.http.get<Product[]>('http://localhost:8089/products');
+    return this.http.get<Product[]>('http://localhost:8089/products',{
+      headers:new HttpHeaders({
+        Authorization:'Basic '+window.btoa('user:12345')
+      })
+    });
   }
 }

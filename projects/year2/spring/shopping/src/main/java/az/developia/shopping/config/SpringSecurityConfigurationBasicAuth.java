@@ -25,11 +25,20 @@ public class SpringSecurityConfigurationBasicAuth extends WebSecurityConfigurerA
                 .authorizeRequests()
                 
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/products").permitAll()
+                //.antMatchers(HttpMethod.GET, "/products").permitAll()
                 .anyRequest().authenticated().and()
                 .httpBasic();
 
 
     }
     
+    
+    @Autowired
+    DataSource dataSource;
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.jdbcAuthentication().dataSource(dataSource);
+            
+    }
 }
