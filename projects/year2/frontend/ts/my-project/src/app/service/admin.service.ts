@@ -13,7 +13,7 @@ export class AdminService {
   findAllProducts(){
     return this.http.get<Product[]>('http://localhost:8089/products',{
       headers:new HttpHeaders({
-        Authorization:'Basic '+window.btoa('user:12345')
+        Authorization:'Basic '+window.btoa('eli:12')
       })
     });
   }
