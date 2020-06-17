@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/service/admin.service';
 import { Product } from 'src/app/model/models';
+import { MatDialog } from '@angular/material';
+import { AddProductComponent } from '../add-product/add-product.component';
 
 @Component({
   selector: 'app-admin',
@@ -9,14 +11,25 @@ import { Product } from 'src/app/model/models';
 })
 export class AdminComponent implements OnInit {
 products:Product[]=[];
-  constructor(private adminService:AdminService) { }
+  constructor(private adminService:AdminService,private matD:MatDialog) { }
 
   ngOnInit() {
-    this.adminService.findAllProducts().subscribe(
-      response=>{
-      this.products=response;
-      }
-    );
+   this.load();
+  }
+  onAddProduct(){
+ let dialog=this.matD.open(AddProductComponent);
+ dialog.afterClosed().subscribe(
+   resp=>{
+this.load();
+   }
+ );
   }
 
+ load(){
+  this.adminService.findAllProducts().subscribe(
+    response=>{
+    this.products=response;
+    }
+  );
+ }
 }

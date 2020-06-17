@@ -17,6 +17,10 @@ import { SignupComponent } from './component/signup/signup.component';
 import { ShowImageComponent } from './component/show-image/show-image.component';
 import { BasketComponent } from './component/basket/basket.component';
 import { ConfirmOrderComponent } from './component/confirm-order/confirm-order.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatInputModule, MatDialogModule, 
+  MatProgressSpinnerModule, MatButtonModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,9 +40,12 @@ import { ConfirmOrderComponent } from './component/confirm-order/confirm-order.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,HttpClientModule
+    FormsModule,HttpClientModule, BrowserAnimationsModule,
+    MatInputModule, MatDialogModule, 
+  MatProgressSpinnerModule, MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[AddProductComponent]
 })
 export class AppModule { }

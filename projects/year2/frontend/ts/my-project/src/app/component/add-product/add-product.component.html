@@ -1,1 +1,16 @@
-<p>add-product works!</p>
+<form (ngSubmit)="onAddProduct()">
+    <label for="name">Ad:</label>
+    <input name="productName" id="name" class="form-control" 
+    type="text" [(ngModel)]="product.name" required>
+
+    <label for="price">Qiymet:</label>
+    <input name="productPrice" id="price" class="form-control" 
+    type="text" [(ngModel)]="product.price" required>
+
+
+    <button type="submit">Yadda saxla</button>
+
+
+
+
+</form>
