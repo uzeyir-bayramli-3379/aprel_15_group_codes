@@ -7,6 +7,7 @@
         <th>Ad</th>
         <th>Qiymet</th>
         <th>Sekil</th>
+        <th>Emeliyyatlar</th>
         
     </tr>
     </thead>
@@ -24,6 +25,10 @@
         <td>
             {{p.image}}
         </td>
+<td>
+  <button (click)="onUpdateProduct(p.id)">Redakte</button>
+</td>
+
                 </tr>
     </tbody>
   </table>

@@ -9,11 +9,26 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class AddProductComponent implements OnInit {
 product:Product=new Product();
-  constructor(private productService:ProductService) { }
+  constructor(private ps:ProductService) { }
 
   ngOnInit() {
+let id:number=this.ps.selectedProductId;
+if(id==0){
+
+}else{
+  this.ps.findById(id).subscribe(
+    resp=>{
+      this.product=resp;
+    }
+  );
+}
   }
   onAddProduct(){
-this.productService.addProduct(this.product).subscribe();
+    if(this.product.id>0){
+      this.ps.updateProduct(this.product).subscribe();
+    }else{
+      this.ps.addProduct(this.product).subscribe();
+    }
+
   }
 }
