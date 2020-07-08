@@ -1,0 +1,33 @@
+<table id="books-table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th> <th>
+                Name
+            </th> <th>
+                Price
+            </th> <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let b of books">
+            <td>
+                {{b.id}}
+            </td>
+            <td>
+                {{b.name}}
+            </td>
+
+            <td>
+                {{b.price}}
+            </td>
+            <td>
+                {{b.description}}
+            </td>
+        </tr>
+    </tbody>
+</table>
