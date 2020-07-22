@@ -1,1 +1,3 @@
-<p>add-book works!</p>
+Book name: <input type="text" [(ngModel)]="book.name" > <br>
+Book price: <input type="number" [(ngModel)]="book.price"> <br>
+<button class="btn btn-success" (click)="onAddBook()" >Save</button>

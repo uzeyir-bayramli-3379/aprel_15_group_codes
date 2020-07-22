@@ -8,10 +8,12 @@ import { Book } from '../model/models';
 })
 export class BookService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  public findAllBooks(){
+  public findAllBooks() {
     return this.http.get<Book[]>(`${API_URL}/books`);
   }
-
+  public addBook(book: Book) {
+    return this.http.post<number>(`${API_URL}/books`, book);
+  }
 }
