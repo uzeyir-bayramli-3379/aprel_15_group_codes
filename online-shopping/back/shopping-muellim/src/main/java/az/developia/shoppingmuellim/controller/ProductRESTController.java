@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import az.developia.shoppingmuellim.dao.ProductDAO;
 import az.developia.shoppingmuellim.model.Product;
+import az.developia.shoppingmuellim.model.SearchModel;
 
 @RestController
 @RequestMapping(path="/products")
@@ -54,5 +55,14 @@ public List<Product> findAll(){
 		return productDAO.findAllByUsername(username) ;
 	}
 	
+	
+	
+	// http://localhost:8204/products/find-partial - POST
+		@PostMapping(path="/find-partial")
+		public  List<Product>  findPartial(@RequestBody SearchModel searchModel){
+			return productDAO.findPartial(searchModel.getSearch(), searchModel.getBegin(), searchModel.getLength());
+		}
+		
+		
 	
 }
