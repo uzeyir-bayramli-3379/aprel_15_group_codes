@@ -3,6 +3,7 @@ package az.developia.shoppingmuellim.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,5 +42,13 @@ public List<Product> findAll(){
 	public  Product  findById(@PathVariable(name="id") Integer id){
 		return productDAO.findById(id).get();
 	}
+	
+	
+	@DeleteMapping(path="/{id}") // http://localhost:8204/products/4 - DELETE
+	public  void  deleteById(@PathVariable(name="id") Integer id){
+		  productDAO.deleteById(id) ;
+	}
+	
+	
 	
 }
