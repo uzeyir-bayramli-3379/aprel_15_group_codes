@@ -1,4 +1,4 @@
-package az.developia.shoppingmuellim;
+package az.developia.shoppingmuellim.controller;
 
 import java.util.List;
 
