@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "shoppingMuellim": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "shoppingMuellim"
+    }
+  },
+  "defaultProject": "shoppingMuellim",
+  "cli": {
+    "analytics": "475a5235-1391-43f6-92f4-0d294ec702c6"
+  }
 }
