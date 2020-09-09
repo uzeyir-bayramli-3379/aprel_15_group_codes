@@ -48,7 +48,11 @@ public List<Product> findAll(){
 	public  void  deleteById(@PathVariable(name="id") Integer id){
 		  productDAO.deleteById(id) ;
 	}
-	
+	// http://localhost:8204/products/username/ferid - GET
+	@GetMapping(path="/username/{username}") 
+	public  List<Product>  findAllByUsername(@PathVariable(name="username") String username){
+		return productDAO.findAllByUsername(username) ;
+	}
 	
 	
 }
